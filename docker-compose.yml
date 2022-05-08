@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  neo4j:
+    image: neo4j
+    restart: always
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    volumes:
+      - ./volumes/neo4j/data:/data
+      - ./volumes/neo4j/logs:/logs
+      - ./analysis/data:/import
+    environment:
+      - NEO4J_dbms_security_allow__csv__import__from__file__urls=true
+      - NEO4J_dbms_directories_import="/import"

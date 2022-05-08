@@ -1,0 +1,23 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+tensorflow-macos = { version = "*", platform_machine = "== 'arm64'" }
+tensorflow-metal = { version = "*", platform_machine = "== 'arm64'" }
+numpy = "1.21.6"
+pandas = "*"
+matplotlib = "*"
+scikit-learn = "*"
+pulp = "*"
+ortoolpy = "*"
+opencv-python = "*"
+jupyter = "*"
+networkx = "*"
+
+[dev-packages]
+notebook = "*"
+
+[requires]
+python_version = "3.9"
