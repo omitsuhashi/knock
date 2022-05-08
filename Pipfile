@@ -6,6 +6,7 @@ name = "pypi"
 [packages]
 tensorflow-macos = { version = "*", platform_machine = "== 'arm64'" }
 tensorflow-metal = { version = "*", platform_machine = "== 'arm64'" }
+tensorflow = { version = "*", platform_machine = "!= 'arm64'" }
 numpy = "1.21.6"
 pandas = "*"
 matplotlib = "*"
@@ -15,6 +16,7 @@ ortoolpy = "*"
 opencv-python = "*"
 jupyter = "*"
 networkx = "*"
+tqdm = "*"
 
 [dev-packages]
 notebook = "*"
